@@ -1,0 +1,24 @@
+{
+  "name": "Portfolio",
+  "authors": [
+    "Phil365 <batphil8@hotmail.com>"
+  ],
+  "description": "Mon Portfolio Genial",
+  "main": "index.html",
+  "keywords": [
+    "portfolio"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "scrollmagic": "^2.0.5",
+    "gsap": "^1.18.4"
+  }
+}
