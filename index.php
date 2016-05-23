@@ -1,3 +1,10 @@
+ <?php
+    /***CONNEXION AVEC LES FUNCTIONS****************************************/
+     include 'config/mesParametresBD.php';
+     include 'classes_pdo.php';
+     include 'texte.php';
+     /***********************************************************************/
+    ?>
 <!DOCTYPE html>
 <html>
 
@@ -34,12 +41,14 @@
     <title>Mon Portfolio Philippe Germain</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
     <link href='style/index.css' rel='stylesheet' type='text/css'>
-
+    
+   
 
 
 </head>
 
-<body>
+<body>  
+  
     <section id="one">
         <div class=“inner”>
             <h1>ScrollMagic Tutorial</h1>
@@ -62,6 +71,15 @@
         <div class=“inner”>
             <h1>ScrollMagic Tutorial</h1>
             <p>Learn how to toggle classes using <strong>setClassToggle</strong>.</p>
+            
+            <?php 
+            $unTexte= new Texte('','','');
+                                $textes=  Texte::listerTousArticles(1);
+                                echo "<div id='contenuArt'>";
+                                foreach ($textes as $index => $value) {
+                                    $value->afficher();
+                                }
+            ?>
         </div>
     </section>
 
